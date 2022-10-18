@@ -16,4 +16,4 @@ Puesto de otra manera:
 
 `days_difference = days_between_years(iyear, fyear) + (days_in_year(fyear, fmonth, fday) - days_in_year(iyear, imonth, iday))`
 
-siendo `fyear`, `fmonth` y `fday` el año, mes y día iniciales, y `iyear`, `imonth` y `iday` el año, mes y día finales.
+siendo `fyear`, `fmonth` y `fday` el año, mes y día finales, y `iyear`, `imonth` y `iday` el año, mes y día iniciales.

@@ -1,6 +1,6 @@
 # Díferencia de días entre dos fechas:
 
-def is_year_leap(year): # se determina si un año es bisiesto
+def is_year_leap(year): # determina si un año es bisiesto
     if year % 4 != 0:
         return False
     elif year % 100 != 0:
@@ -10,19 +10,19 @@ def is_year_leap(year): # se determina si un año es bisiesto
     else:
         return True
 
-def days_in_month(year, month): # se regresa la cantidad de días de un mes
+def days_in_month(year, month): # regresa la cantidad de días de un mes
     days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     if is_year_leap(year):
         days[1] = 29
     return days[month-1]
 
-def days_in_year(year, month, day): # se regresa la cantidad de días de un año
+def days_in_year(year, month, day): # regresa la cantidad de días pasados en un año
 	days = 0
 	for m in range(1, month):
 		days += days_in_month(year, m)
 	return days + day
 
-def days_between_years(iyear, fyear): # se regresa la cantidad de días entre distintos años
+def days_between_years(iyear, fyear): # regresa la cantidad de días entre distintos años
     days = 0
     for y in range(iyear, fyear):
         days += days_in_year(y, 12, 31)
